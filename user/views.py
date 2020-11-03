@@ -25,9 +25,9 @@ def index(request):
 
 def login_form(request):
     if request.method == 'POST':
-        ID = request.POST['ID']
+        username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(request, ID=ID, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             current_user =request.user
@@ -63,9 +63,9 @@ def signup_form(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save() #completed sign up
-            ID = form.cleaned_data.get('ID')
+            username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
-            user = authenticate(ID=ID, password=password)
+            user = authenticate(username=username, password=password)
             login(request, user)
             # Create data in profile table for user
             current_user = request.user
