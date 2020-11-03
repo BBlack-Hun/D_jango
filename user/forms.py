@@ -7,21 +7,21 @@ from user.models import UserProfile
 
 
 class SignUpForm(UserCreationForm):
-    username = forms.CharField(max_length=30,label= 'User Name :')
+    ID = forms.CharField(max_length=30,label= 'User Name :')
     email = forms.EmailField(max_length=200,label= 'Email :')
     first_name = forms.CharField(max_length=100, help_text='First Name',label= 'First Name :')
     last_name = forms.CharField(max_length=100, help_text='Last Name',label= 'First Name :')
 
     class Meta:
         model = User
-        fields = ('username', 'email','first_name','last_name', 'password1', 'password2', )
+        fields = ('ID', 'email','first_name','last_name', 'password1', 'password2', )
 
 class UserUpdateForm(UserChangeForm):
     class Meta:
         model = User
         fields = ( 'username','email','first_name','last_name')
         widgets = {
-            'username'  : TextInput(attrs={'class': 'input','placeholder':'username'}),
+            'ID'  : TextInput(attrs={'class': 'input','placeholder':'ID'}),
             'email'     : EmailInput(attrs={'class': 'input','placeholder':'email'}),
             'first_name': TextInput(attrs={'class': 'input','placeholder':'first_name'}),
             'last_name' : TextInput(attrs={'class': 'input','placeholder':'last_name' }),
