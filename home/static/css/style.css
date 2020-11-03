@@ -341,12 +341,13 @@ textarea.input {
 
 .header-logo {
   display: inline-block;
-  margin-right: 15px;
+  margin-left: 480px;
 }
 
 .header-logo .logo>img {
   width: 100%;
   max-height: 70px;
+  
 }
 
 /*----------------------------*\
@@ -355,17 +356,20 @@ textarea.input {
 
 .header-search {
   display: inline-block;
-  padding: 15px 0px;
+  padding: 40px, 0px;
   max-width: 400px;
 }
 
 .header-search>form {
   position: relative;
+  margin-left: 40px;
+  width: 500px;
 }
 
 .header-search>form .search-input {
   padding-left: 150px;
   padding-right: 45px;
+  color: white;
 }
 
 .header-search>form .search-categories {
@@ -795,6 +799,9 @@ textarea.input {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background: white;
+  opacity: 70%;
+  
 }
 
 .banner.banner-2 .banner-caption {
@@ -806,6 +813,7 @@ textarea.input {
 
 .banner h1 {
   font-size: 46px;
+  padding: 20px 0 0 0;
   text-transform: uppercase;
 }
 
