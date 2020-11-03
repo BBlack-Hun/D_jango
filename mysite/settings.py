@@ -121,10 +121,10 @@ LANGUAGES = [
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-DEFAULT_CURRENCY = 'Won'
+DEFAULT_CURRENCY = 'USD'
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Korea/seoul'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
